@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Seaborn</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Styles -->
+		<!-- Styles -->
+		<style>
+			#chartdiv {
+			width: 60%;
+			height: 300px;
+			}
+			
+			#chartdiv2 {
+			  width: 100%;
+			  height: 500px;
+			}
+
+			#chartdiv3 {
+			  width: 100%;
+			  height: 100%;
+			}
+			/*
+			.chartdiv4 {
+			width: 150px;
+    		height: 150px;
+    		max-width:  100%;
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+			}*/
+			.center { 				
+  				margin-left: -3%;
+  				margin-right: auto;
+  				width: 85%;
+				height: 85%
+				}
+			.center1 { 				
+				margin-left: 4%;
+				margin-right: auto;
+				width: 90%;
+				height: 90%
+				}
+			.center2 { 				
+				margin-left: 2%;
+				margin-right: auto;
+				width: 100%;
+				height: 100%
+				}
+			.smallerm {
+				margin-top: 0px;
+				margin-bottom: 0px;
+				margin-right: 10px;
+				margin-left: 10px;}
+			p.c{
+			text-align: justify;
+			margin-left: 85px;
+  			margin-right: 85px;
+			}
+			#button {
+			width: 100px;
+			height: 50px;	
+ 
+			}
+			.but{
+			margin-top: 50px;
+			margin-left: 410px;
+  			margin-right: 100px;
+			margin-bottom: 50px;
+
+			}
+			.button {
+			border: none;
+			color: white;
+			text-align: justify;
+			font-size: 14px;
+			cursor: pointer;
+			background-color: white;
+			}
+
+			</style>
+		
+			
+	</head>
+	<body>
+
+		<!-- Header -->
+			<a href="index.html"><header id="header" class="alt">
+				<div class="inner">
+					<h1 style="font-style:微軟黑體">智慧農業預測分析</h1>
+					<center><h4>以香蕉為例 </h4></center>					
+				</div>
+			</header></a>
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+				<section id="intro" class="main">
+					<h2><image src="images\Seaborn_logo.png" alt="Seaborn Icon" width="45" hwight="20" id="vito1"></image>Seaborn</h2>
+				</section>
+
+				<!-- Image1&Introduction -->
+				<section id="intro" class="main">
+					<h3 class='smallerm'>google trend香蕉搜尋趨勢</h3>
+					<div><img src="images/b_trend.png" class="center2"></div>
+					<p class="c">此圖為google搜尋引擎中香蕉關鍵字搜尋的趨勢與熱度，搜尋引擎背後代表著使用者最初始的行為與意念，提供我們用不同角度探討影響消費者行為的因素。搜尋熱度的統計結果可提供給農委會、產銷合作班、貿易商、食品加工廠等發展相關加工製品或是廣告ideas等方向，以創新且因應潮流的方式解決供過於求的問題。</p>
+					
+				</section>
+
+				<section id="intro" class="main">
+					<h3 class='smallerm'>台灣農業批發營業額熱力圖 </h3>
+					<div><img src="images/ind_rev.png" class="center1"></div>
+					<p class="c">本圖資料來源為經濟部統計處，我國農產品與畜產業每年銷售總額約為7-8百億之間，約佔整體GDP的1-2%，但因農業與畜產為民生必需產品，相較於其他產業雖然很渺小但卻不可或缺。</p>
+					
+				</section>
+
+				<!-- Image2&Introduction -->
+				<section id="intro" class="main">
+					<h3 class='smallerm'>世界香蕉主要出口國家(2018)</h3>
+					<div class="chartdiv"><img src="images/world_exp.png" class="center" ></div>
+					<p class="c">厄瓜多為全球出口香蕉最多的國家，而菲律賓為世界第二，亞洲第一，其他主要皆為熱帶地區且國土面積廣大的國家為主（此圖可搭配下圖“全球香蕉進口大國”一起觀察）。</p>
+				
+				</section>
+
+				<!-- Image3&Introduction -->
+				<section id="intro" class="main">
+					<h3 class='smallerm'>世界香蕉主要進口國家(2018)</h3>
+					<div class="chartdiv"><img src="images/world_imp.png" class="center"></div>
+					<p class="c">世界進口香蕉最大為美國，主要來自於中南美洲或鄉鄰的地域。其他國家如俄羅斯、中國、日本等，主要來源為菲律賓等東南亞國家（此圖可對照上面那個世界主要出口國家柱狀圖）。</p>
+					<p class="c">由世界主要出口國與主要進口國這兩張圖表可得知，香蕉的進出口主要來自於相鄰的國家，主要原因大致可歸因於水果重量較重，空運不符商業成本，所以主要走海運為主。同時，也因為水果的保存不易，容易因碰撞受損或壓傷，加上保鮮期有限，僅能夠以鄰近國家為主要貿易對象。</p>
+				</section>	
+				<article id= "button" class="but">
+					<header>
+						<form action="/">
+						<button type="submit" class="button">
+						BACK TO MENU
+						</button>
+						</form>
+					</header>
+				</article>
+
+				<!-- Image4&Introduction -->
+				<!--<section id="intro" class="main">
+					<div><img src="images/taiwan_output.png" alt="taiwan output" class="center" width=auto height="650"></div>
+					<h3>台灣香蕉年產量(公噸)</h3>
+					<p>103-109進口量變化</p>
+					<h1>簡介</h1>
+				</section>	-->	
+	</body>
+</html>

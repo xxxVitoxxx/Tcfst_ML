@@ -1,0 +1,1632 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Charts</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Styles -->
+		<!-- Styles -->
+		<style>
+			#chartdiv {
+			width: 95%;
+			height: 400px;
+			}
+			
+			#chartdiv2 {
+			  width: 100%;
+			  height: 380px;
+			}
+
+			#chartdiv3 {
+			  width: 100%;
+			  height: 400px;
+			}
+			#chartdiv9 {
+			width: 100%;
+			height: 400px;
+			}
+			/*
+			.chartdiv4 {
+			width: 150px;
+    		height: 150px;
+    		max-width:  100%;
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+			}*/
+
+			.center { 				
+  				margin-left: auto;
+  				margin-right: auto;
+  				width: 50%;
+				}
+			#chartdiv5 {
+      		width: 100%;
+      		height: 400px;
+    		}
+
+			.amcharts-g2 {
+			stroke-dasharray: 3px 3px;
+			stroke-linejoin: round;
+			stroke-linecap: round;
+			-webkit-animation: am-moving-dashes 1s linear infinite;
+			animation: am-moving-dashes 1s linear infinite;
+			}
+			
+			@-webkit-keyframes am-moving-dashes {
+			100% {
+				stroke-dashoffset: -31px;
+			}
+			}
+			@keyframes am-moving-dashes {
+			100% {
+				stroke-dashoffset: -31px;
+			}
+			}
+			
+			.amcharts-graph-column-front {
+			-webkit-transition: all .3s .3s ease-out;
+			transition: all .3s .3s ease-out;
+			}
+			.amcharts-graph-column-front:hover {
+			fill: #496375;
+			stroke: #496375;
+			-webkit-transition: all .3s ease-out;
+			transition: all .3s ease-out;
+			}
+			
+			.amcharts-g3 {
+			stroke-linejoin: round;
+			stroke-linecap: round;
+			stroke-dasharray: 500%;
+			stroke-dasharray: 0 /;    /* fixes IE prob */
+			stroke-dashoffset: 0 /;   /* fixes IE prob */
+			-webkit-animation: am-draw 40s;
+			animation: am-draw 40s;
+			}
+			@-webkit-keyframes am-draw {
+				0% {
+					stroke-dashoffset: 500%;
+				}
+				100% {
+					stroke-dashoffset: 0%;
+				}
+			}
+			@keyframes am-draw {
+				0% {
+					stroke-dashoffset: 500%;
+				}
+				100% {
+					stroke-dashoffset: 0%;
+				}
+			}
+			#chartdiv6 {
+			width: 100%;
+			height: 400px;
+			}
+			#chartdiv7 {
+			width: 100%;
+			height: 400px;
+			}
+			#chartdiv8 {
+			width: 100%;
+			height: 400px;
+			}
+			p.c {
+  			text-align: justify;
+			margin-left: 90px;
+  			margin-right: 90px;
+			
+			} 
+			#button {
+			width: 100px;
+			height: 50px;	
+
+			}
+			.but{
+			margin-top: 50px;
+			margin-left: 410px;
+ 			margin-right: 100px;
+			margin-bottom: 50px;
+
+			}
+			.button {
+			border: none;
+			color: white;
+			text-align: justify;
+			font-size: 14px;
+			cursor: pointer;
+			background-color: white;
+			}
+			</style>
+		
+			
+	</head>
+	<body>
+
+		<!-- Header -->
+			<a href="index.html"><header id="header" class="alt">
+				<div class="inner">
+					<h1 style="font-style: 微軟黑體">智慧農業預測分析</h1>
+					<center><h4>以香蕉為例 </h4></center>					
+				</div>
+			</header></a>
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+				<section id="intro" class="main">
+					<h2><image src="images\amcharts_logo.png" alt="Data Icon" width="65" hwight="20" id="vito"></image>Java Script</h2>
+				</section>
+
+				<!-- Image1&Introduction -->
+				<section id="intro" class="main">
+					<h3>香蕉產地價格與種植面積比較圖</h3>
+					<div id="chartdiv8"></div>
+					<p class="c">每年香蕉的價格起起伏伏，非常不穩定，而靠香蕉吃飯的蕉農最在意的就是隔年的收益。由上圖我們可以觀察到，前一年香蕉的價格高低會影響著農民種植的意願，而反映在農作行為上就是種植面積的增減，例如：2009年與2014-2016年香蕉的價格較高，隔年蕉農種植的面積也隨著增加，而在2010年香蕉的價格低落，隔年農民種植的面積也跟著修正。</p>
+					
+				</section>
+				
+				<section id="intro" class="main">
+					<h3>香蕉產量與產地價格關係圖</h3>
+					<div id="chartdiv7"></div>
+					<p class="c">依照經濟學供需法則，盛產期的作物必須面對的就是市場價格低落。由上圖可看出在2010-2011及2018-2019年，香蕉在旺季時期市場價格相對低落。相反的，2009與2016年的產量低伴隨著較高的市場價格。而就趨勢來看，2010年到2016年香蕉的產量趨勢逐漸下滑，而市場價格則持續走揚，而如何在產量價格與農民的收益之間取得平衡是一個相當重要的課題。</p>
+					
+				</section>
+
+				<section id="intro" class="main">
+					<h3>歷年香蕉產量與台灣的總人口變化關係圖</h3>
+					<div id="chartdiv9"></div>
+					<p class="c">根據農委會的資料顯示，市面上台灣人民所食用的香蕉約99%為本地所產的。由上圖的資料可看出，台灣總人口自2009年的2311.97萬人到2019年的2360.3121萬人，成長了2.09%。而香蕉產量從172,549公噸成長到了342,628公噸，總量增加了98.57%。這個數據代表了台灣香蕉生產量增加速度已經遠遠超過了台灣總人口成長率。內銷市場老早已不足以消化本地香蕉的生產量；政府耗費了相當多的資源在穩定香蕉市場的價格，包含香蕉再製品的推廣與外銷市場的開拓，甚至是保證收購與去化措施，但以目前的狀況來看成效有限。</p>
+					
+					
+				</section>
+
+				<!-- Image4&Introduction -->
+				<section id="intro" class="main">
+					<h3>香蕉種植面積、收穫面積與產量關係圖</h3>
+					<div id="chartdiv5"></div>
+					<p class="c">由上圖可得知，雖然香蕉的產量會因為氣候、病蟲害等有所影響，但上圖種植面積與收穫面積的差異的主要原因是來自颱風雨暴雨所致。整體而言，台灣蕉農種植香蕉的面積是日漸擴大，伴隨而來的即是生產量的持續擴漲。當風調雨順沒有災情時，台灣的香蕉產量必然會大於需求，台灣蕉農只能祈禱颱風多多來，但不要來自己的蕉田，自己才能夠有豐厚的收入。</p>
+					
+					
+				</section>
+
+				<section id="intro" class="main">
+					<h3>各種災害導致香蕉收穫損失示意圖</h3>
+					<div id="chartdiv"></div>
+					<p class="c">由此圖可發現，颱風為最主要農業的干擾因素，例如民國98年莫拉克颱風造成台灣南部地區嚴重受創，其中最讓人忘不了的就是高雄的小林村滅村事件。颱風威力之大，導致當年的產量比其它年都少許多。同樣，民國95年的尼伯特、莫蘭蒂與梅姬颱風也使台灣香蕉香蕉產量降低。</p>
+				
+					
+				</section>
+
+				<!-- Image2&Introduction -->
+				<section id="intro" class="main">
+					<h3>台灣香蕉主要出口國家</h3>
+					<div id="chartdiv2"></div>
+					<p class="c">台灣從前以香蕉王國聞名，其中以日本為主要出口地區。但近年來，菲律賓開始大規模種植香蕉並投入大量生產技術的投入，地廣促成低價優勢，造成台灣香蕉出口量大幅降低，出口量在民國106年達到低點。近年來在政府推動智慧農業，香蕉研究所與農民的努力之下，生產出高品質的香蕉，日本外銷市場有逐漸回歸的趨勢。</p>
+				
+					
+				</section>
+
+				<!-- Image3&Introduction -->
+				<section id="intro" class="main">
+					<h3>台灣香蕉主要進口國家</h3>
+					<div id="chartdiv3"></div>
+					<p class="c">台灣香蕉的內銷市場主要為自給自足，但仍會因天氣等因素導致產量不足，進而引起價格的波動。在2016年，台灣香蕉的產量低、價格高，貿易商需從外國進口香蕉來滿足國內的需求，其中以厄瓜多、越南、菲律賓為主要進口國，不過這部分占國內香蕉銷售額較低(以2016年來看，香蕉進口佔台灣本地數量約千分之1)。此圖顯示了台灣的香蕉市場波動極大，產量高時價格暴跌，農民喊苦，產量低時仍需向國外進口以滿足國內需求。</p>
+					
+				</section>	
+				<article id= "button" class="but">
+					<header>
+						<form action="index_Statistics_Matplotlib.html">
+						<button type="submit" class="button">
+						NEXT MATPLOTLIB
+						</button>
+						</form>
+					</header>
+				</article>
+
+				<!-- <section id="intro" class="main">
+					<div id="chartdiv6"></div>
+					<h3>問善盈</h3>
+					<p></p> 
+			
+				</section> -->
+				
+				
+
+				
+
+				
+
+
+<!-- Items -->
+			<!----		<section class="main items">
+						<article class="item">
+							<header>
+								<a href="tech.html"><img src="images/tech11.png" alt="" /></a>
+								<h2>使用技術</h2>
+							</header>
+							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+							<ul class="actions">
+								<li><a href="tech.html" class="button">Learn More</a></li>
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="#"><img src="images/statistics.jpg" alt="" /></a>
+								<h2>資料統計</h2>
+							</header>
+							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="#"><img src="images/data.jpg" alt="" /></a>
+								<h2>資料前處理</h2>
+							</header>
+							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="#"><img src="images/ml.jpg" alt="" /></a>
+								<h2>機器學習</h2>
+							</header>
+							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</article>
+					</section> -->
+
+				<!-- CTA -->
+				<!--	<section id="cta" class="main special">
+						<h2>Etiam veroeros lorem</h2>
+						<p>Phasellus ac augue ac magna auctor tempus proin<br />
+						accumsan lacus a nibh commodo in pellentesque dui<br />
+						in hac habitasse platea dictumst.</p>
+						<ul class="actions">
+							<li><a href="#" class="button big">Get Started</a></li>
+						</ul>
+					</section>
+
+			-->
+
+				<!-- Footer -->
+					<!--<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Design: nin. </p>
+					</footer> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			
+
+<!-- Chart code -->
+<section>
+	<div>
+		<!-- Resources -->
+		<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+		<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+		<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+		<script>
+		am4core.ready(function() {
+
+		// Themes begin
+		am4core.useTheme(am4themes_animated);
+		// Themes end
+
+		var chart = am4core.create("chartdiv", am4charts.XYChart);
+		chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+		chart.data = [
+		{
+			country: "颱風",
+			visits: 11272796.39
+		},
+		{
+			country: "低溫",
+			visits: 185488.20
+		},
+		{
+			country: "寒流",
+			visits: 162269.89
+		},
+		{
+			country: "洪水",
+			visits: 122134.46
+		},
+		{
+			country: "暴雨",
+			visits: 98067.09
+		},
+		{
+			country: "強風",
+			visits: 6920.54
+		},
+		{
+			country: "龍捲風",
+			visits: 2212.16
+		},
+		{
+			country: "冰雹",
+			visits: 1851.00
+		},
+		{
+			country: "乾旱",
+			visits: 187.00
+		}
+		];
+
+		var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+		categoryAxis.renderer.grid.template.location = 0;
+		categoryAxis.dataFields.category = "country";
+		categoryAxis.renderer.minGridDistance = 40;
+		categoryAxis.fontSize = 14;
+
+		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+		valueAxis.min = 0;
+		valueAxis.max = 11300000;
+		valueAxis.strictMinMax = true;
+		valueAxis.renderer.minGridDistance = 30;
+		valueAxis.fontSize =14;
+		// axis break
+		var axisBreak = valueAxis.axisBreaks.create();
+		axisBreak.startValue = 200000;
+		axisBreak.endValue = 11000000;
+		//axisBreak.breakSize = 0.005;
+
+		// fixed axis break
+		var d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
+		axisBreak.breakSize = 0.05 * (1 - d) / d; // 0.05 means that the break will take 5% of the total value axis height
+
+		// make break expand on hover
+		var hoverState = axisBreak.states.create("hover");
+		hoverState.properties.breakSize = 1;
+		hoverState.properties.opacity = 0.1;
+		hoverState.transitionDuration = 1500;
+
+		axisBreak.defaultState.transitionDuration = 1000;
+		/*
+		// this is exactly the same, but with events
+		axisBreak.events.on("over", function() {
+		axisBreak.animate(
+			[{ property: "breakSize", to: 1 }, { property: "opacity", to: 0.1 }],
+			1500,
+			am4core.ease.sinOut
+		);
+		});
+		axisBreak.events.on("out", function() {
+		axisBreak.animate(
+			[{ property: "breakSize", to: 0.005 }, { property: "opacity", to: 1 }],
+			1000,
+			am4core.ease.quadOut
+		);
+		});*/
+
+		var series = chart.series.push(new am4charts.ColumnSeries());
+		series.dataFields.categoryX = "country";
+		series.dataFields.valueY = "visits";
+		series.columns.template.tooltipText = "{valueY.value}";
+		series.columns.template.tooltipY = 0;
+		series.columns.template.strokeOpacity = 0;
+
+		// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+		series.columns.template.adapter.add("fill", function(fill, target) {
+		return chart.colors.getIndex(target.dataItem.index);
+		});
+
+		}); // end am4core.ready()
+		</script>
+	</div>
+</section>
+
+<section >
+		<div id="chartdiv2">
+			<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+			
+			<!-- Chart code -->
+			<script>
+			am4core.ready(function() {
+			
+			// Themes begin
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			
+			// Create chart instance
+			var chart = am4core.create("chartdiv2", am4charts.XYChart);
+			
+			// Add data
+			chart.data = [{
+			"year": 103,
+			"JP": 4070.16,
+			"US": 0.0,
+			"HK": 0.53,
+			"MY": 0.0,
+			"CN": 96.92,
+			"AE": 0.0,
+			"MO": 0.0,
+			"PLW": 0.0,
+			"SG": 0.0,
+			"BN": 0.06,
+			"AU": 0.2,
+			"CA": 0.0
+		},{
+			"year": 104,
+			"JP": 3253.41,
+			"US": 0.0,
+			"HK": 2.34,
+			"MY": 0.0,
+			"CN": 18.95,
+			"AE": 0.0,
+			"MO": 0.0,
+			"PLW": 0.0,
+			"SG": 6.6,
+			"BN": 0.05,
+			"AU": 0.0,
+			"CA": 0.0
+		},{
+			"year": 105,
+			"JP": 1486.59,
+			"US": 0.0,
+			"HK": 0.35,
+			"MY": 0.0,
+			"CN": 0.0,
+			"AE": 0.0,
+			"MO": 0.0,
+			"PLW": 0.0,
+			"SG": 5.4,
+			"BN": 0.0,
+			"AU": 0.0,
+			"CA": 0.0
+		},{
+			"year": 106,
+			"JP": 1057.5,
+			"US": 0.0,
+			"HK": 0.31,
+			"MY": 0.0,
+			"CN": 46.95,
+			"AE": 5.04,
+			"MO": 0.0,
+			"PLW": 0.01,
+			"SG": 0.0,
+			"BN": 0.0,
+			"AU": 0.0,
+			"CA": 0.0
+		},{
+			"year": 107,
+			"JP": 1766.11,
+			"US": 0.0,
+			"HK": 0.48,
+			"MY": 0.0,
+			"CN": 70.44,
+			"AE": 28.8,
+			"MO": 0.0,
+			"PLW": 0.0,
+			"SG": 0.12,
+			"BN": 0.0,
+			"AU": 0.0,
+			"CA": 0.0
+		},{
+			"year": 108,
+			"JP": 2859.08,
+			"US": 0.0,
+			"HK": 0.17,
+			"MY": 0.0,
+			"CN": 60.67,
+			"AE": 0.0,
+			"MO": 0.02,
+			"PLW": 3.17,
+			"SG": 0.0,
+			"BN": 0.0,
+			"AU": 0.0,
+			"CA": 0.0
+		},{
+			"year": 109,
+			"JP": 3474.64,
+			"US": 0.1,
+			"HK": 0.0,
+			"MY": 0.0,
+			"CN": 343.36,
+			"AE": 15.0,
+			"MO": 0.05,
+			"PLW": 0.26,
+			"SG": 0.0,
+			"BN": 0.0,
+			"AU": 0.0,
+			"CA": 0.0
+		}];
+
+		/*,{
+			"year": 102,
+			"JP": 6856.78,
+			"US": 0.0,
+			"HK": 1.11,
+			"MY": 0.0,
+			"CN": 283.17,
+			"AE": 0.0,
+			"MO": 0.0,
+			"PLW": 0.0,
+			"SG": 6.6,
+			"BN": 0.0,
+			"AU": 0.0,
+			"CA": 0.1
+		},{
+			"year": 101,
+			"JP": 8530.71,
+			"US": 0.0,
+			"HK": 1.25,
+			"MY": 0.0,
+			"CN": 629.69,
+			"AE": 0.0,
+			"MO": 0.0,
+			"PLW": 0.0,
+			"SG": 0.69,
+			"BN": 0.0,
+			"AU": 0.0,
+			"CA": 0.0
+		}*/
+			
+			// Create axes
+			var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+			categoryAxis.dataFields.category = "year";
+			//categoryAxis.title.text = "Exporting Country";//
+			categoryAxis.renderer.grid.template.location = 0;
+			categoryAxis.renderer.minGridDistance = 20;
+			categoryAxis.renderer.cellStartLocation = 0.1;
+			categoryAxis.renderer.cellEndLocation = 0.9;
+			categoryAxis.fontSize = 14;
+			
+			var  valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			valueAxis.min = 0;
+			valueAxis.title.text = "香蕉出口量 (mt)";
+			valueAxis.fontSize =14;
+
+			//var axisBreak = valueAxis.axisBreaks.create();
+			//axisBreak.startValue = 10;
+			//axisBreak.endValue = 900;
+			
+			// Create series
+			function createSeries(field, name, stacked) {
+			var series = chart.series.push(new am4charts.ColumnSeries());
+			series.dataFields.valueY = field;
+			series.dataFields.categoryX = "year";
+			series.name = name;
+			series.columns.template.tooltipText = "出口量{name}: [bold]{valueY}[/]公噸";
+			series.stacked = stacked;
+			series.fontSize = 14;
+			series.columns.template.width = am4core.percent(80);
+			}
+			
+			createSeries("JP", "JP", false);
+			createSeries("US", "US", true);
+			createSeries("HK", "HK", true);
+			createSeries("MY", "MY", true);
+			createSeries("CN", "CN", true);
+			createSeries("AE", "AE", true);
+			createSeries("MO", "MO", true);
+			createSeries("PLW", "PLW", true);
+			createSeries("SG", "SG", true);
+			createSeries("BN", "BN", true);
+			createSeries("AU", "AU", true);
+			createSeries("CA", "CA", true);
+
+			// Add legend
+			chart.legend = new am4charts.Legend();
+			chart.legend.fontSize =14;
+			
+			}); // end am4core.ready()
+			</script>
+		</div>
+	</section>
+	<section>
+		<div>
+			<!-- Resources -->
+			<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+			
+			<!-- Chart code -->
+			<script>
+			am4core.ready(function() {
+			
+			// Themes begin
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			
+			// Create chart instance
+			var chart = am4core.create("chartdiv3", am4charts.XYChart);
+			
+			// Add data
+			chart.data = [{
+			"year": 103,
+			"TH": 0.03,
+			"CR": 0.0,
+			"KR": 0.0,
+			"PH": 0.0,
+			"US": 0.0,
+			"GT": 0.0,
+			"VN": 20.0,
+			"MY": 0.0,
+			"ECU": 0.0,
+			"CN": 0.02,
+			"CZ": 0.5
+		},{
+			"year": 104,
+			"TH": 0.06,
+			"CR": 0.01,
+			"KR": 0.0,
+			"PH": 2.99,
+			"US": 0.0,
+			"GT": 0.0,
+			"VN": 20.0,
+			"MY": 0.0,
+			"ECU": 0.0,
+			"CN": 0.4,
+			"CZ": 0.5
+		},{
+			"year": 105,
+			"TH": 0.16,
+			"CR": 0.0,
+			"KR": 0.0,
+			"PH": 10.24,
+			"US": 0.0,
+			"GT": 0.0,
+			"VN": 20.36,
+			"MY": 0.0,
+			"ECU": 11.5,
+			"CN": 0.0,
+			"CZ": 0.0
+		},{
+			"year": 106,
+			"TH": 0.18,
+			"CR": 0.0,
+			"KR": 0.0,
+			"PH": 8.98,
+			"US": 0.0,
+			"GT": 0.0,
+			"VN": 0.38,
+			"MY": 0.04,
+			"ECU": 6.44,
+			"CN": 0.0,
+			"CZ": 0.0
+		},{
+			"year": 107,
+			"TH": 0.03,
+			"CR": 0.0,
+			"KR": 0.0,
+			"PH": 3.7,
+			"US": 0.0,
+			"GT": 2.86,
+			"VN": 0.0,
+			"MY": 0.0,
+			"ECU": 0.0,
+			"CN": 0.0,
+			"CZ": 0.0
+		},{
+			"year": 108,
+			"TH": 0.12,
+			"CR": 6.8,
+			"KR": 0.0,
+			"PH": 0.28,
+			"US": 0.09,
+			"GT": 2.45,
+			"VN": 0.12,
+			"MY": 0.0,
+			"ECU": 0.0,
+			"CN": 0.0,
+			"CZ": 0.0
+		},{
+			"year": 109,
+			"TH": 0.04,
+			"CR": 6.8,
+			"KR": 0.03,
+			"PH": 0.0,
+			"US": 0.0,
+			"GT": 0.0,
+			"VN": 0.0,
+			"MY": 0.0,
+			"ECU": 0.0,
+			"CN": 0.0,
+			"CZ": 0.0
+		}];
+		/*
+		,{
+			"year": 101,
+			"TH": 0.74,
+			"CR": 0.0,
+			"KR": 0.0,
+			"PH": 0.0,
+			"US": 0.0,
+			"GT": 0.0,
+			"VN": 0.0,
+			"MY": 0.0,
+			"ECU": 0.0,
+			"CN": 0.05,
+			"CZ": 0.0
+		}
+		*/
+			// Create axes
+			var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+			categoryAxis.dataFields.category = "year";
+			/*categoryAxis.title.text = "Imported Country";*/
+			categoryAxis.renderer.grid.template.location = 0;
+			categoryAxis.renderer.minGridDistance = 20;
+			categoryAxis.renderer.cellStartLocation = 0.1;
+			categoryAxis.renderer.cellEndLocation = 0.9;
+			categoryAxis.fontSize = 14;
+			
+			var  valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			valueAxis.min = 0;
+			valueAxis.fontSize = 14;
+			valueAxis.title.text = "香蕉進口量 (mt)";
+			
+			// Create series
+			function createSeries(field, name, stacked) {
+			  var series = chart.series.push(new am4charts.ColumnSeries());
+			  series.dataFields.valueY = field;
+			  series.dataFields.categoryX = "year";
+			  series.name = name;
+			  series.columns.template.tooltipText = "{name}: [bold]{valueY}[/]";
+			  series.stacked = stacked;
+			  series.columns.template.width = am4core.percent(95);
+			}
+			
+			createSeries("TH", "TH", false);
+			createSeries("CR", "CR", true);
+			createSeries("KR", "KR", true);
+			createSeries("PH", "PH", true);
+			createSeries("US", "US", true);
+			createSeries("GT", "GT", true);
+			createSeries("VN", "VN", true);
+			createSeries("MY", "MY", true);
+			createSeries("ECU", "ECU", true);
+			createSeries("CN", "CN", true);
+			createSeries("CZ", "CZ", true);
+			// Add legend
+			chart.legend = new am4charts.Legend();
+			chart.legend.fontSize =14;
+			
+			}); // end am4core.ready()
+			</script>
+		</div>
+		<div>
+			<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+			
+			<!-- Chart code -->
+			<script>
+			am4core.ready(function() {
+			
+			// Themes begin
+			am4core.useTheme(am4themes_frozen);
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			
+			am4core.options.autoSetClassName = true;
+			
+			// Create chart instance
+			var chart = am4core.create("chartdiv5", am4charts.XYChart);
+			
+			chart.colors.step = 2;
+			chart.maskBullets = false;
+			
+			// Add data
+			chart.data = [{
+				"date": "2009",
+				"distance":172549.79,
+				"townName": "",
+				"townName2": "",
+				"townSize": 7,
+				"latitude": 12348.76,
+				"duration": 11423.79
+			}, {
+				"date": "2010",
+				"distance": 287895.39,
+				"townName": "",
+				"townSize": 7,
+				"latitude": 14071.7,
+				"duration": 13453.38
+			}, {
+				"date": "2011",
+				"distance": 305739.6,
+				"townName": "",
+				"townSize": 7,
+				"latitude": 13788.32,
+				"duration": 12947.23
+			}, {
+				"date": "2012",
+				"distance": 295264.56,
+				"townName": "",
+				"townSize": 7,
+				"latitude": 13248.75,
+				"duration": 12947.23
+			}, {
+				"date": "2013",
+				"distance": 291292.49,
+				"townName": "",
+				"townName2": "",
+				"townSize": 7,
+				"latitude": 13343.58,
+				"duration": 13042.4
+			}, {
+				"date": "2014",
+				"distance": 291292.49,
+				"townName": "",
+				"townSize": 7,
+				"latitude": 13998.97,
+				"duration": 13290.58
+			}, {
+				"date": "2015",
+				"distance": 274066.16,
+				"townName": "",
+				"townSize": 7,
+				"latitude": 14605.44,
+				"duration": 14093.1
+			}, {
+				"date": "2016",
+				"distance": 257558.67,
+				"townName": "",
+				"townName2": "",
+				"townSize": 7,
+				"latitude": 16016.25,
+				"duration": 15697.01
+			}, {
+				"date": "2017",
+				"distance": 356016.95,
+				"townName": "",
+				"townSize": 7,
+				"latitude": 16841.64,
+				"duration": 15803.75
+			}, {
+				"date": "2018",
+				"distance": 356238.48,
+				"townName": "",
+				"townSize": 7,
+				"latitude": 16639.16,
+				"duration": 15447.75
+			}, {
+				"date": "2019",
+				"distance": 342628.58,
+				"townName": "",
+				"townSize": 7,
+				"latitude": 16341.72,
+				"duration": 14913.99
+			
+			}];
+			
+			// Create axes
+			var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+			dateAxis.dataFields.category = "category";
+			dateAxis.renderer.grid.template.location = 0;
+			dateAxis.renderer.minGridDistance = 50;
+			dateAxis.renderer.grid.template.disabled = true;
+			dateAxis.renderer.fullWidthTooltip = true;
+			
+			var distanceAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			distanceAxis.title.text = "香蕉產量(公噸)";
+			distanceAxis.renderer.grid.template.disabled = true;
+			distanceAxis.fontSize = 14;
+			
+			var durationAxis = chart.yAxes.push(new am4charts.DurationAxis());
+			durationAxis.title.text = "面積(公頃)";
+			durationAxis.baseUnit = "minute";
+			durationAxis.renderer.grid.template.disabled = true;
+			durationAxis.renderer.opposite = true;
+			durationAxis.fontSize =14;
+			durationAxis.durationFormatter.durationFormat = " mm";
+			
+			var latitudeAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			latitudeAxis.renderer.grid.template.disabled = true;
+			latitudeAxis.renderer.labels.template.disabled = true;
+			latitudeAxis.fontSize=14
+			
+			// Create series
+			var distanceSeries = chart.series.push(new am4charts.ColumnSeries());
+			distanceSeries.id = "g1";
+			distanceSeries.dataFields.valueY = "distance";
+			distanceSeries.dataFields.dateX = "date";
+			distanceSeries.yAxis = distanceAxis;
+			distanceSeries.tooltipText = "{valueY}公噸 ";
+			distanceSeries.name = "產量";
+			distanceSeries.columns.template.fillOpacity = 0.7;
+			
+			var disatnceState = distanceSeries.columns.template.states.create("hover");
+			disatnceState.properties.fillOpacity = 0.9;
+			
+			var durationSeries = chart.series.push(new am4charts.LineSeries());
+			durationSeries.id = "g3";
+			durationSeries.dataFields.valueY = "duration";
+			durationSeries.dataFields.dateX = "date";
+			durationSeries.yAxis = durationAxis;
+			durationSeries.name = "收穫面積";
+			durationSeries.strokeWidth = 2;
+			durationSeries.tooltipText = "{valueY}公頃";
+			
+			var durationBullet = durationSeries.bullets.push(new am4charts.Bullet());
+			var durationRectangle = durationBullet.createChild(am4core.Rectangle);
+			durationBullet.horizontalCenter = "middle";
+			durationBullet.verticalCenter = "middle";
+			durationBullet.width = 7;
+			durationBullet.height = 7;
+			durationRectangle.width = 7;
+			durationRectangle.height = 7;
+			
+			var durationState = durationBullet.states.create("hover");
+			durationState.properties.scale = 1.2;
+			//actually here
+			var latitudeSeries = chart.series.push(new am4charts.LineSeries());
+			latitudeSeries.id = "g2";
+			latitudeSeries.dataFields.valueY = "latitude";
+			latitudeSeries.dataFields.dateX = "date";
+			latitudeSeries.yAxis = durationAxis;
+			latitudeSeries.name = "種植面積";
+			latitudeSeries.strokeWidth = 2;
+			latitudeSeries.tooltipText = " {valueY} 公頃";
+			
+			//not here
+			var latitudeBullet = latitudeSeries.bullets.push(new am4charts.CircleBullet());
+			latitudeBullet.circle.fill = am4core.color("#fff");
+			latitudeBullet.circle.strokeWidth = 2;
+			latitudeBullet.circle.propertyFields.radius = "townSize";
+			
+			var latitudeState = latitudeBullet.states.create("hover");
+			latitudeState.properties.scale = 1.2;
+			
+			// var latitudeLabel = latitudeSeries.bullets.push(new am4charts.LabelBullet());
+			// latitudeLabel.label.text = "{townName2}";
+			// latitudeLabel.label.horizontalCenter = "left";
+			// latitudeLabel.label.dx = 14;
+			
+			// Add legend
+			chart.legend = new am4charts.Legend();
+			chart.legend.fontSize =14;
+			
+			// Add cursor
+			chart.cursor = new am4charts.XYCursor();
+			chart.cursor.fullWidthLineX = true;
+			chart.cursor.xAxis = dateAxis;
+			chart.cursor.lineX.strokeOpacity = 0;
+			chart.cursor.lineX.fill = am4core.color("#000");
+			chart.cursor.lineX.fillOpacity = 0.1;
+			
+			});
+		</script>
+		</div>
+		<div>
+			<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+   			<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    		<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+			<script>
+				am4core.ready(function() {
+				
+				// Themes begin
+				am4core.useTheme(am4themes_animated);
+				// Themes end
+				
+				var chart = am4core.create("chartdiv6", am4charts.XYChart);
+				chart.hiddenState.properties.opacity = 0; // this makes initial fade in effect
+				
+				//chart.dataSource.url = "./reg_coef.json";
+				//chart.dataSource.parser = new am4core.JSONParser()
+				//chart.dataSource.parser.options.useColumnNames=true
+				//console.log(chart.data);
+			
+				
+			chart.data = [{
+			  "country": "year",
+			  "value": -942.996024
+			}, {
+			  "country": "plant_area",
+			  "value": 6.44939218
+			}, {
+			  "country": "plant_number",
+			  "value": 0.00758292355
+			}, {
+			  "country": "affected_area",
+			  "value": 10.2870035
+			}, {
+			  "country": "lost_area",
+			  "value": -118.524867
+			}, {
+			  "country": "lost_amount",
+			  "value": 3.40303738
+			}, {
+			  "country": "lost_value",
+			  "value": -0.0194030468
+			}, {
+			  "country": "temp_mean",
+			  "value": 5213.51801
+			}, {
+			  "country": "temp_max",
+			  "value": 1595.43188
+			}, {
+			  "country": "temp_min",
+			  "value": -117.880807
+			}, {
+			  "country": "rain_accu",
+			  "value": 1.65048183
+			}, {
+			  "country": "rain_days",
+			  "value": -34.5972766
+			}, {
+			  "country": "windsp_max",
+			  "value": 455.892666
+			}, {
+			  "country": "gustsp_max",
+			  "value": -201.164572
+			}, {
+			  "country": "gustsp_max",
+			  "value": -201.164572
+			}, {
+			  "country": "humid_mean",
+			  "value": 1017.31870
+			}, {
+			  "country": "humid_min",
+			  "value": -10.1649619
+			}, {
+			  "country": "pressure_mean",
+			  "value": -290.576626
+			}, {
+			  "country": "sunshine_hours",
+			  "value": 2.87713195
+			}];
+			
+			
+				
+				var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.dataFields.category = "country";
+				categoryAxis.renderer.minGridDistance = 40;
+				
+				var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+				
+				var series = chart.series.push(new am4charts.CurvedColumnSeries());
+				series.dataFields.categoryX = "country";
+				series.dataFields.valueY = "value";
+				series.tooltipText = "{valueY.value}"
+				series.columns.template.strokeOpacity = 0;
+				
+				series.columns.template.fillOpacity = 0.75;
+				
+				var hoverState = series.columns.template.states.create("hover");
+				hoverState.properties.fillOpacity = 1;
+				hoverState.properties.tension = 0.4;
+				
+				chart.cursor = new am4charts.XYCursor();
+				
+				// Add distinctive colors for each column using adapter
+				series.columns.template.adapter.add("fill", function(fill, target) {
+				  return chart.colors.getIndex(target.dataItem.index);
+				});
+				
+				chart.scrollbarX = new am4core.Scrollbar();
+				
+				}); // end am4core.ready()
+				</script>
+		</div>
+
+		<div>
+			<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+			
+			<!-- Chart code -->
+			<script>
+			am4core.ready(function() {
+			
+			// Themes begin
+			am4core.useTheme(am4themes_frozen);
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			
+			am4core.options.autoSetClassName = true;
+			
+			// Create chart instance
+			var chart = am4core.create("chartdiv7", am4charts.XYChart);
+			
+			chart.colors.step = 2;
+			chart.maskBullets = false;
+			
+			// Add data
+			chart.data = [{
+				"date": "2009",
+				"distance":172549.79,
+				
+				
+				
+				"duration": 25.5
+			}, {
+				"date": "2010",
+				"distance": 287895.39,
+				
+				
+				
+				"duration": 13.82
+			}, {
+				"date": "2011",
+				"distance": 305739.6,
+			
+				"duration": 15.05
+			}, {
+				"date": "2012",
+				"distance": 295264.56,
+			
+				"duration": 19.11
+			}, {
+				"date": "2013",
+				"distance": 291292.49,
+				
+				"duration": 22.39
+			}, {
+				"date": "2014",
+				"distance": 291292.49,
+				
+				
+				
+				"duration": 24.18
+			}, {
+				"date": "2015",
+				"distance": 274066.16,
+				
+				"townSize": 7,
+				
+				"duration": 27.41
+			}, {
+				"date": "2016",
+				"distance": 257558.67,
+				"duration": 37.92
+			}, {
+				"date": "2017",
+				"distance": 356016.95,
+			
+				
+				"duration": 34.61
+			}, {
+				"date": "2018",
+				"distance": 356238.48,
+			
+				
+				"duration": 20.62
+			}, {
+				"date": "2019",
+				"distance": 342628.58,
+				
+				
+				"duration": 21.37
+			
+			}];
+			
+			// Create axes
+			var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+			dateAxis.dataFields.category = "category";
+			dateAxis.renderer.grid.template.location = 0;
+			dateAxis.renderer.minGridDistance = 50;
+			dateAxis.renderer.grid.template.disabled = true;
+			dateAxis.renderer.fullWidthTooltip = true;
+			dateAxis.fontSize=14;
+			
+			var distanceAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			distanceAxis.title.text = "香蕉產量(公噸)";
+			distanceAxis.renderer.grid.template.disabled = true;
+			distanceAxis.fontSize=14;
+			
+			var durationAxis = chart.yAxes.push(new am4charts.DurationAxis());
+			durationAxis.title.text = "價格";
+			durationAxis.baseUnit = "minute";
+			durationAxis.renderer.grid.template.disabled = true;
+			durationAxis.renderer.opposite = true;
+			durationAxis.fontSize=14;
+			durationAxis.durationFormatter.durationFormat = " mm";
+			
+			
+			
+			// Create series
+			var distanceSeries = chart.series.push(new am4charts.ColumnSeries());
+			distanceSeries.id = "g1";
+			distanceSeries.dataFields.valueY = "distance";
+			distanceSeries.dataFields.dateX = "date";
+			distanceSeries.yAxis = distanceAxis;
+			distanceSeries.tooltipText = "{valueY}公噸 ";
+			distanceSeries.name = "產量";
+			distanceSeries.columns.template.fillOpacity = 0.7;
+			
+			var disatnceState = distanceSeries.columns.template.states.create("hover");
+			disatnceState.properties.fillOpacity = 0.9;
+			
+			var durationSeries = chart.series.push(new am4charts.LineSeries());
+			durationSeries.id = "g3";
+			durationSeries.dataFields.valueY = "duration";
+			durationSeries.dataFields.dateX = "date";
+			durationSeries.yAxis = durationAxis;
+			durationSeries.name = "價格";
+			durationSeries.strokeWidth = 2;
+			durationSeries.tooltipText = "{valueY}元";
+			
+			var durationBullet = durationSeries.bullets.push(new am4charts.Bullet());
+			var durationRectangle = durationBullet.createChild(am4core.Rectangle);
+			durationBullet.horizontalCenter = "middle";
+			durationBullet.verticalCenter = "middle";
+			durationBullet.width = 7;
+			durationBullet.height = 7;
+			durationRectangle.width = 7;
+			durationRectangle.height = 7;
+			
+			var durationState = durationBullet.states.create("hover");
+			durationState.properties.scale = 1.2;
+			
+			
+			
+			// Add legend
+			chart.legend = new am4charts.Legend();
+			chart.legend.fontSize =14;
+			
+			// Add cursor
+			chart.cursor = new am4charts.XYCursor();
+			chart.cursor.fullWidthLineX = true;
+			chart.cursor.xAxis = dateAxis;
+			chart.cursor.lineX.strokeOpacity = 0;
+			chart.cursor.lineX.fill = am4core.color("#000");
+			chart.cursor.lineX.fillOpacity = 0.1;
+			
+			}); // end am4core.ready()
+			</script>
+		</div>
+		<div>
+			<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+			
+			<!-- Chart code -->
+			<script>
+			am4core.ready(function() {
+			
+			// Themes begin
+			am4core.useTheme(am4themes_frozen);
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			
+			am4core.options.autoSetClassName = true;
+			
+			// Create chart instance
+			var chart = am4core.create("chartdiv8", am4charts.XYChart);
+			
+			chart.colors.step = 2;
+			chart.maskBullets = false;
+			
+			// Add data
+			chart.data = [{
+				"date": "2009",
+				"distance":12348.76,
+				"duration": 25.5
+			}, {
+				"date": "2010",
+				"distance": 14071.70,
+				"duration": 13.82
+			}, {
+				"date": "2011",
+				"distance": 13788.32,
+				"duration": 15.05
+			}, {
+				"date": "2012",
+				"distance": 13248.75,
+				"duration": 19.11
+			}, {
+				"date": "2013",
+				"distance": 13343.58,
+				"duration": 22.39
+			}, {
+				"date": "2014",
+				"distance": 13998.97,
+				"duration": 24.18
+			}, {
+				"date": "2015",
+				"distance": 14605.44,
+				"duration": 27.41
+			}, {
+				"date": "2016",
+				"distance": 16016.25,
+				"duration": 37.92
+			}, {
+				"date": "2017",
+				"distance": 16841.64,
+				"duration": 34.61
+			}, {
+				"date": "2018",
+				"distance": 16639.16,
+				"duration": 20.62
+			}, {
+				"date": "2019",
+				"distance": 16341.72,
+				"duration": 21.37
+			
+			}];
+			
+			// Create axes
+			var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+			dateAxis.dataFields.category = "category";
+			dateAxis.renderer.grid.template.location = 0;
+			dateAxis.renderer.minGridDistance = 50;
+			dateAxis.renderer.grid.template.disabled = true;
+			dateAxis.renderer.fullWidthTooltip = true;
+			dateAxis.fontSize=14;
+			
+			var distanceAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			distanceAxis.title.text = "種植面積";
+			distanceAxis.renderer.grid.template.disabled = true;
+			distanceAxis.fontSize=14;
+			
+			var durationAxis = chart.yAxes.push(new am4charts.DurationAxis());
+			durationAxis.title.text = "價格(每公斤)";
+			durationAxis.baseUnit = "minute";
+			durationAxis.renderer.grid.template.disabled = true;
+			durationAxis.renderer.opposite = true;
+			durationAxis.fontSize=14;
+			durationAxis.durationFormatter.durationFormat = " mm";
+			
+			
+			
+			// Create series
+			var distanceSeries = chart.series.push(new am4charts.ColumnSeries());
+			distanceSeries.id = "g1";
+			distanceSeries.dataFields.valueY = "distance";
+			distanceSeries.dataFields.dateX = "date";
+			distanceSeries.yAxis = distanceAxis;
+			distanceSeries.tooltipText = "{valueY}公頃 ";
+			distanceSeries.name = "種植面積";
+			distanceSeries.columns.template.fillOpacity = 0.7;
+			
+			var disatnceState = distanceSeries.columns.template.states.create("hover");
+			disatnceState.properties.fillOpacity = 0.9;
+			
+			var durationSeries = chart.series.push(new am4charts.LineSeries());
+			durationSeries.id = "g3";
+			durationSeries.dataFields.valueY = "duration";
+			durationSeries.dataFields.dateX = "date";
+			durationSeries.yAxis = durationAxis;
+			durationSeries.name = "價格";
+			durationSeries.strokeWidth = 2;
+			durationSeries.tooltipText = "{valueY}元";
+			
+			var durationBullet = durationSeries.bullets.push(new am4charts.Bullet());
+			var durationRectangle = durationBullet.createChild(am4core.Rectangle);
+			durationBullet.horizontalCenter = "middle";
+			durationBullet.verticalCenter = "middle";
+			durationBullet.width = 7;
+			durationBullet.height = 7;
+			durationRectangle.width = 7;
+			durationRectangle.height = 7;
+			
+			var durationState = durationBullet.states.create("hover");
+			durationState.properties.scale = 1.2;
+			
+			
+			
+			// Add legend
+			chart.legend = new am4charts.Legend();
+			chart.legend.fontSize =14;
+			
+			// Add cursor
+			chart.cursor = new am4charts.XYCursor();
+			chart.cursor.fullWidthLineX = true;
+			chart.cursor.xAxis = dateAxis;
+			chart.cursor.lineX.strokeOpacity = 0;
+			chart.cursor.lineX.fill = am4core.color("#000");
+			chart.cursor.lineX.fillOpacity = 0.1;
+			
+			}); // end am4core.ready()
+			</script>
+		</div>
+		<div>
+			<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+			<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+			
+			<!-- Chart code -->
+			<script>
+			am4core.ready(function() {
+			
+			// Themes begin
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			
+			am4core.options.autoSetClassName = true;
+			
+			// Create chart instance
+			var chart = am4core.create("chartdiv9", am4charts.XYChart);
+			
+			chart.colors.step = 2;
+			chart.maskBullets = false;
+			
+			// Add data
+			chart.data = [{
+				"date": "2009",
+				"distance": 2311.9772,
+				"townName": "",
+				"townSize": 3.5,
+				"duration": 72549.79,
+				"latitude": 172549.79
+			}, {
+				"date": "2010",
+				"distance": 2316.2123,
+				"duration": 287895.39,
+				"latitude": 287895.39
+			}, {
+				"date": "2011",
+				"distance": 2322.4912,
+				"duration": 305739.6,
+				"latitude": 305739.6
+			}, {
+				"date": "2012",
+				"distance": 2331.5822,
+				"duration": 295264.56,
+				"latitude": 295264.56
+			}, {
+				"date": "2013",
+				"distance": 2337.3517,
+				"duration": 291292.49,
+				"latitude": 291292.49
+			}, {
+				"date": "2014",
+				"distance": 2343.3753,
+				"duration": 299899.88,
+				"latitude": 299899.88
+			}, {
+				"date": "2015",
+				"distance": 2349.2074,
+				"townName": "",
+				"townSize": 5,
+				"duration": 274066.16,
+				"latitude": 274066.16
+			}, {
+				"date": "2016",
+				"distance": 2353.9816,
+				"duration": 257558.67,
+				"latitude": 257558.67
+			}, {
+				"date": "2017",
+				"distance": 2357.1227,
+				"duration": 356016.95,
+				"latitude": 356016.95
+			}, {
+				"date": "2018",
+				"townName": "",
+				"distance": 2358.8932,
+				"duration": 356238.48,
+				"latitude": 356238.48
+			
+			}, {
+				"date": "2019",
+				"duration": 342628.58,
+				"latitude": 342628.58,
+				"distance": 2360.3121,
+			}
+			];
+			
+			// Create axes
+			var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+			dateAxis.dataFields.category = "category";
+			dateAxis.renderer.grid.template.location = 0;
+			dateAxis.renderer.minGridDistance = 10;
+			dateAxis.renderer.grid.template.disabled = true;
+			dateAxis.renderer.fullWidthTooltip = true;
+			dateAxis.fontSize=14;
+			
+			var distanceAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			distanceAxis.title.text = "全國總人口數(萬)";
+			distanceAxis.renderer.grid.template.disabled = true;
+			distanceAxis.fontSize=14;
+
+			var durationAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			durationAxis.title.text = "產量(噸)";
+			durationAxis.renderer.grid.template.disabled = true;
+			durationAxis.renderer.opposite = true;
+			durationAxis.fontSize=14;
+			durationAxis.durationFormatter.durationFormat = "' '";
+			
+			var latitudeAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			latitudeAxis.renderer.grid.template.disabled = true;
+			latitudeAxis.renderer.labels.template.disabled = true;
+			latitudeAxis.fontSize=14;
+			// Create series
+			var distanceSeries = chart.series.push(new am4charts.ColumnSeries());
+			distanceSeries.id = "g1";
+			distanceSeries.dataFields.valueY = "distance";
+			distanceSeries.dataFields.dateX = "date";
+			distanceSeries.yAxis = distanceAxis;
+			distanceSeries.tooltipText = "{valueY}萬";
+			distanceSeries.name = "台灣總人口(萬)";
+			distanceSeries.columns.template.fillOpacity = 0.7;
+			
+			var disatnceState = distanceSeries.columns.template.states.create("hover");
+			disatnceState.properties.fillOpacity = 0.9;
+			
+			var durationSeries = chart.series.push(new am4charts.LineSeries());
+			durationSeries.id = "g3";
+			durationSeries.dataFields.valueY = "duration";
+			durationSeries.dataFields.dateX = "date";
+			durationSeries.yAxis = durationAxis;
+			durationSeries.name = "香蕉總產量(公噸)";
+			durationSeries.strokeWidth = 2;
+			durationSeries.tooltipText = "{valueY.formatDuration()}";
+			
+			var durationBullet = durationSeries.bullets.push(new am4charts.Bullet());
+			var durationRectangle = durationBullet.createChild(am4core.Rectangle);
+			durationBullet.horizontalCenter = "middle";
+			durationBullet.verticalCenter = "middle";
+			durationBullet.width = 7;
+			durationBullet.height = 7;
+			durationRectangle.width = 7;
+			durationRectangle.height = 7;
+			
+			var durationState = durationBullet.states.create("hover");
+			durationState.properties.scale = 1.2;
+			///
+			///var latitudeSeries = chart.series.push(new am4charts.LineSeries());
+			///latitudeSeries.id = "g2";
+			///latitudeSeries.dataFields.valueY = "產量";
+			///latitudeSeries.dataFields.dateX = "date";
+			///latitudeSeries.yAxis = latitudeAxis;
+			///latitudeSeries.name = "產量";
+			///latitudeSeries.strokeWidth = 2;
+			///latitudeSeries.tooltipText = " {valueY}";
+			
+			///var latitudeBullet = latitudeSeries.bullets.push(new am4charts.CircleBullet());
+			///latitudeBullet.circle.fill = am4core.color("#fff");
+			///latitudeBullet.circle.strokeWidth = 2;
+			///latitudeBullet.circle.propertyFields.radius = "townSize";
+			
+			///var latitudeState = latitudeBullet.states.create("hover");
+			///latitudeState.properties.scale = 1.2;
+			
+			///var latitudeLabel = latitudeSeries.bullets.push(new am4charts.LabelBullet());
+			///latitudeLabel.label.text = "{townName2}";
+			///latitudeLabel.label.horizontalCenter = "left";
+			///latitudeLabel.label.dx = 14;
+			///
+			// Add legend
+			chart.legend = new am4charts.Legend();
+			chart.legend.fontSize =14;
+			// Add cursor
+			chart.cursor = new am4charts.XYCursor();
+			chart.cursor.fullWidthLineX = true;
+			chart.cursor.xAxis = dateAxis;
+			chart.cursor.lineX.strokeOpacity = 0;
+			chart.cursor.lineX.fill = am4core.color("#000");
+			chart.cursor.lineX.fillOpacity = 0.1;
+			
+			}); // end am4core.ready()
+			</script>
+		</div>
+	</section>
+			
+
+	</body>
+</html>

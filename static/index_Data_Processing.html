@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Data Processing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="FlexSlider/flexslider.css">
+		<!-- Styles -->
+		<!-- Styles -->
+		<style>
+			#chartdiv {
+			width: 95%;
+			height: 500px;
+			}
+			
+			#chartdiv2 {
+			  width: 100%;
+			  height: 500px;
+			}
+
+			#chartdiv3 {
+			  width: 100%;
+			  height: 500px;
+			}
+			.center { 				
+  				margin-left: auto;
+  				margin-right: auto;
+  				width: 100%;
+				}
+				#button {
+			width: 100px;
+			height: 50px;	
+ 
+			}
+			.but{
+			margin-top: 50px;
+			margin-left: 410px;
+  			margin-right: 100px;
+			margin-bottom: 50px;
+
+			}
+			.button {
+			border: none;
+			color: white;
+			text-align: justify;
+			font-size: 14px;
+			cursor: pointer;
+			background-color: white;
+			}
+			</style>
+			
+		
+			
+	</head>
+	<body>
+
+		<!-- Header -->
+			<a href="index.html"><header id="header" class="alt">
+				<div class="inner">
+					<h1 ><font face="monospace">智慧農業預測分析</font></h1>
+					<center><h4>以香蕉為例 </h4></center>					
+				</div>
+			</header></a>
+
+			<div id="wrapper">
+
+				<!-- Banner -->
+				<section id="intro" class="main">
+					<h2><image src="images\Data.png" alt="Data Icon" width="50" hwight="20" id="vito"></image>資料前處理</h2>
+				</section>
+				<!-- Items -->
+				<section id="intro" class="main">
+					<div class="flexslider" >
+						<ul class="slides">
+							<!--資料檢視-->
+							<li>
+								<h2>資料檢視</h2>
+								<h4>下載來自農委會、農糧署、氣象局等政府單位提供之Open Data，資料類型有種植資料、</h4>
+								<h4>收穫資料、災害損失資料、氣候資料、各地每日市場價格資料、每月進出口資料等下載共約</h4>
+								<h4>89,708筆資料。</h4>
+								<img src="images/s1.jpg" alt="images/s1.jpg"><br>
+								<h5>檢視 98 年-108 年每年台灣各縣市香蕉收穫產量資料。</h5>
+							</li>
+							<li>
+								<br><br><br><br><br><br><br><br>
+								<img src="images/s2.jpg" alt="images/s2.jpg"><br>
+								<h5>檢視 98 年-108 年每年台灣各災害影響各縣市香蕉產量數據。</h5>
+							</li>
+							<li>
+								<br><br><br><br><br><br><br><br>
+								<img src="images/s3.jpg" alt="images/s3.jpg"><br>
+								<h5>檢視 100 年-110 年,台灣各測站每日氣候數據。</h5>
+							</li>
+						
+							<!--爬蟲-->
+							<li>
+								<h2>爬蟲</h2>
+								<img src="images/p1.png" alt="images/p1.png" ><br>
+								<h5>用selenium的Locating Elements去定位輸入框並給值，透過BeautifulSoup解析抓取需要的特定資料存成csv檔案格式。</h5>
+							</li>
+							<li>
+								<br><br><br><br><br><br>
+								<img src="images/p2.png" alt="images/p2.png" ><br></li>
+							<li>
+								<br><br><br><br><br>
+								<img src="images/p3.png" alt="images/p3.png" ><br>
+								<h5>將爬下來的csv檔做清理(將進出口改為類別的資料格式、國家名稱改為國際的國家代碼)，將清理完的資料存成csv檔案格式，並且放到MySQL資料庫內待後續查詢、使用。</h5>
+							</li>
+							<li>
+								<br><br><br>
+								<img src="images/p4.png" alt="images/p4.png" ><br><br>
+								<img src="images/p5.png" alt="images/p5.png" width="350" height="250"><br>
+								<h5>上圖為使用tqdm美化顯示下載中的動態條以及清理過程的提示。</h5>
+							</li>
+							<li><img src="images/csv.jpg" alt="images/csv.png" width="350" height="250">
+								<h5>左邊的圖是原始資料共有兩千多筆資料,其中有一千多筆重複。</h5>
+								<h5>右邊的圖是去掉重複,處理國家代碼、進出口代碼的資料。</h5>
+							</li>
+				
+							<!--資料清理-->
+							<li>
+								<h2>資料清洗</h2>
+								<h4>檢視資料時發現，欄位需要重新進行編號跟調整，包含台灣縣市中六都改制前後的資料、</h4>
+								<h4>將缺失值處理、重複值調整、非必要欄位的刪除等。</h4><br>
+								<img src="images/mysql_02.png" alt="images/mysql_02.png" width="350" height="250"><br>
+								<h5>location 編號須另外編碼,利用 set、where 等指令,將代號統一以利後續與其他資料進行合併。</h5>
+							</li>
+							<li>
+								<br><br><br><br>
+								<img src="images/mysql_03.png" alt="images/mysql_03.png" width="350" height="250"><br>
+								<h5>將原始資料刪除整列完全相同的重複資料,取得不重複資料。</h5>
+								<br><br>
+								<img src="images/mysql_04.png" alt="images/mysql_04.png" width="350" height="250"><br>
+								<h5>利用 case when 將日期修改至需要的格式(以新增一欄位的方式)。</h5>
+							</li>
+							<li>
+								<br><br><br>
+								<img src="images/mysql_05.png" alt="images/mysql_05.png" width="350" height="250"><br>
+								<h5>將資料 pivot 成不同欄位,減少資料大小(重複的 country, year, id 等)</h5>
+								<br><br>
+								<img src="images/mysql_06.png" alt="images/mysql_06.png" width="350" height="250"><br>
+								<h5>刪除不用的欄與列,挑選出需要的氣象資料欄位(ex. 欄:無人觀測站/有人觀測站,列:外島氣象資料)</h5>
+							</li>
+
+							<!--資料合併-->
+							<li>
+								<h2>資料合併</h2>
+								<h4>完成原始檔案檢視、資料清洗後，因為後續機器學習需要的特徵欄位都儲存在不同的表裡，</h4>
+								<h4>為便於操作，我們按照某些欄位對這些表的資料進行合併組合成一張新的資料表。</h4><br>
+								<img src="images/mysql_01.png" alt="images/mysql_01.png" width="350" height="250"><br>
+								<h5>利用 sum、avg、max、min 等指令,將原始檔案中根據各欄位的內容屬性,將月為單位的資料,合併為整年度資料。</h5>
+							</li>
+							<li>
+								<br><br><br><br><br><br><br><br>
+								<img src="images/s7.jpg" alt="images/s7.jpg" width="350" height="250"><br>
+								<h5>將香蕉生產資料與另一份各縣市市場價格資料合併為完整資料</h5>
+							</li>
+							<!--資料檢視-->
+							<li><h2>資料檢視</h2><br><br>
+
+								<a href="https://colab.research.google.com/drive/1nOVZpmGnjjGDOGeKWanSc6Jo8ugmEkfk?usp=sharing"><img src="images/colab.jpg" alt=""></a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<article id= "button" class="but">
+						<header>
+							<form action="/">
+							<button type="submit" class="button">
+							BACK TO MENU
+							</button>
+							</form>
+						</header>
+					</article>
+				</section>
+
+				
+
+			</div>
+	</body>
+	<!--<script src="https://npmcdn.com/flexslider@2.6.0/flexslider.css"></script>-->
+	<script src="https://npmcdn.com/jquery@3.1.0"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider.js"></script>
+
+	<!--<script type="text/javascript" charset="utf-8">
+		$(window).load(function(){
+			$('.flexslider').flexslider();
+		});
+	</script>-->
+	<script>
+	$(function() {
+		$(".flexslider").flexslider({
+			slideshowSpeed: 100000, //展示时间间隔ms
+			animationSpeed: 500, //滚动时间ms
+			touch: true //是否支持触屏滑动
+		});
+	});	
+	</script>
+</html>

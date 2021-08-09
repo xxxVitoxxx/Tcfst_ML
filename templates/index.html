@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>農業產銷平衡分析</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<link rel="stylesheet" href="{{url_for('static', filename='FlexSlider/flexslider.css')}}" />
+	</head>
+	<style type="text/css">
+  h3 {
+    
+     width: 30;
+     float: left;
+
+  }
+  p.c {
+	text-align: justify;
+	margin-left: 60px;
+	margin-right: 60px;
+	
+} 
+	span.monkey{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	}
+
+	</style>
+	<body>
+
+		<!-- Header -->
+			<a href="{{url_for('index')}}"><header id="header" class="alt">
+				<div class="inner">
+					<h1 ><font face="monospace">智慧農業預測分析</font></h1>
+					<center><h4>以香蕉為例 </h4></center>					
+				</div>
+			</header></a>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<span class="monkey"></span>
+						<img src="{{url_for('static', filename='images/banana_use.png')}}" style="width:10%"></span>
+						<h2>Introduction</h2>
+						<p class="c">香蕉是全球人類吃最多的水果，也是台灣頗具爭議性的作物，近年新聞常報導，因氣候日趨炎熱導致香蕉盛產、產地價格低迷；政府官員將矛頭指向產地盤商壟斷，但農民認為主因在於產量難以精確估計，加上氣候變化無常讓供需失調導致價格崩盤，形成了農民口中的「香蕉賭局」。</p>
+						<p class="c">有鑒於此，為了能讓農民擺脫看天吃飯的宿命，我們除了收集農委會、農糧署、氣象局等的10年以上公開資料，也同步應用網頁爬蟲搜集，資料類型有種植資料、收穫資料、災害損失資料、氣候資料、各地每日市場價格資料、每月進出口資料等，以Hadoop、Spark、Python等進行資料檢視、資料清洗、篩選、分割，導入SQL資料庫系統作為資料的儲存及查詢，並應用機器學習工具，包含DNN、C4.5、XGBoost、CatBoost、AdaBoost、LightBGN等分類工具預測產量分級，使用線性迴歸預測產量數值，找出影響香蕉產量的關鍵脈絡，未來可結合土壤跟農民資料，進行更精準行銷。</p>
+					
+					</section>
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<span class="monkey">
+						<img src="{{url_for('static', filename='images/monkey.png')}}" style="width:10%"></span>									<h2>Member</h2>
+						<img src="../static/images/member.png"  width="1000" height="500">
+						
+					</section>
+				<!--imagetest-->
+					<!--<div><img src="images/taiwan_output.png" alt="taiwan output" width="1100" height="650"></div>-->
+				<!-- Items -->
+					<section class="main items">
+						<article class="item">
+							<!--<form action="tech"> -->
+							<header>
+
+								<a href="{{url_for('static', filename='index_Technology.html')}}"><img src="{{url_for('static', filename='images/tech3.jpg')}}" alt="" /></a>
+								<h2>使用技術</h2>
+							</header> 
+							<!--</form> -->
+							
+							<ul class="actions">
+								<li><a href="{{url_for('static', filename='index_Technology.html')}}" class="button">More...</a></li>
+							</ul>
+						</article>
+
+						<article class="item">
+							<header>
+								<a href="{{url_for('static', filename='index_Statistics.html')}}"><img src="{{url_for('static', filename='images/sstat.jpg')}}" alt="" /></a>
+								<h2>資料統計</h2>
+							</header>
+						
+							<ul class="actions">
+								<li><a href="{{url_for('static', filename='index_Statistics.html')}}" class="button">More...</a></li>
+							</ul>
+						</article>
+
+						<article class="item">
+							<header>
+								<a href="{{url_for('static', filename='index_Data_Processing.html')}}"><img src="{{url_for('static', filename='images/ccleansing.jpg')}}" alt="" /></a>
+								<h2>資料前處理</h2>
+							</header>
+							<ul class="actions">
+								<li><a href="{{url_for('static', filename='index_Data_Processing.html')}}" class="button">More...</a></li>
+							</ul>
+						</article>
+
+						<article class="item">
+							<header>
+								<a href="{{url_for('static', filename='index_Machine_Learning.html')}}"><img src="{{url_for('static', filename='images/mml.jpg')}}" alt="" /></a>
+								<h2>機器學習</h2>
+							</header>
+
+							<ul class="actions">
+								<li><a href="{{url_for('static', filename='index_Machine_Learning.html')}}" class="button">More...</a></li>
+							</ul>
+						</article>
+					</section>
+
+					<!-- <section id="cta" class="main special">
+						<h2>請輸入關鍵參數預測產量</h2>
+						<h3>氣溫：</h3>
+						<p><input type="text" name="p_temp"><br />
+						<h3>日照時數：</h3>
+						<p><input type="text" name="p_sunshine"><br />
+						<ul class="actions">
+							<li><a type="submit" class="button big">開始計算</a></li>
+						</ul>
+						{% if result_text %}
+						<p id="result">{{ result_text }}</p>
+						{% endif %}
+					</section> -->
+			
+				<section id="cta" class="main special">
+					<h2>請輸入關鍵參數預測產量</h2>
+					<!--<form action=""> -->
+						<!--<h3>地區：</h3><input id="param_loc" type="text" name="p_loc"><br>-->
+						<h3>地區：</h3><select id="locality-dropdown" name="locality" onclick="showValue()" style="font-size: 28px"></select><br>
+						<h3>種植株數：</h3><input id="param_plant_num" type="text" name="p_plant_num" style="font-size: 28px"><br>
+						<h3>損失株數：</h3><input id="param_lost_num" type="text" name="p_lost_num" style="font-size: 28px"><br>
+						<h3>氣溫：</h3><input id="param_temp" type="text" name="p_temp" style="font-size: 28px"><br>
+						<h3>日照時數：</h3><input id="param_sunshine" type="text" name="p_sunshine" style="font-size: 28px"><br>
+						
+						<!-- <button id="submit">Submit</button> -->
+						<!-- <input class="submit" value="開始計算"> -->
+
+					<!--</form> -->
+					<!--<h2>This is calculated result</h2>
+   					{% if result_text %}
+					<p id="result">{{ result_text }}</p>
+					{% endif %} -->
+					<button id="cal">Submit</button><br>
+					<div id="place_for_calculate" style="font-size: 50px"></div>
+				</section>
+				
+
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Design: nin. </p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script>
+			$("#cal").click(function(){
+			    var var_temp = $('#param_temp').val();
+                var var_sunshine = $('#param_sunshine').val();
+                var var_loc = $('#locality-dropdown').val();
+                var var_plant = $('#param_plant_num').val();
+                var var_lost = $('#param_lost_num').val();
+                console.log(var_temp+'='+var_sunshine+'='+var_loc+'='+var_plant+'='+var_lost)
+
+			    $.ajax({
+			      url: "/calculate",
+			      type: "get",
+			      data: {p_loc: var_loc, p_plant_num: var_plant, p_lost_num: var_lost ,p_temp: var_temp, p_sunshine:var_sunshine},
+			      success: function(response) {
+			        $("#place_for_calculate").html(response);
+			      },
+			      error: function(xhr) {
+			        //Do Something to handle error
+			        console.log('Error in Flask!')
+			      }
+			    })
+			});
+
+
+			let dropdown = $('#locality-dropdown');
+			dropdown.empty();
+			dropdown.append('<option selected="true" disabled>請選擇</option>');
+			dropdown.prop('selectedIndex', 0);
+
+
+			$.getJSON("static/data/locationid.json", function(data) {
+			      $.each(data, function (key, entry) {
+			    dropdown.append($('<option></option>').attr('value', entry.location_id).text(entry.area));
+			  })
+			});
+
+			function showValue() {
+			    var dd_val = document.getElementById("locality-dropdown");
+				var location_id = dd_val.value;
+				console.log(location_id);
+			}
+			</script>
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<html>
+	<style>
+       .box2 {
+    background: #eeeeee;
+    border-left: 2px solid #7c7c7c;
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 30px;
+    font-size: 19px;
+    line-height: 1.79;
+	}  
+	</style>
+
+	<head>
+		<title>Technology</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<a href="index.html"><header id="header" class="alt">
+				<div class="inner">
+					<h1 style="font-style: 微軟黑體">智慧農業預測分析</h1>
+					<center><h4>以香蕉為例 </h4></center>					
+				</div>
+			</header></a>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				
+
+				<!-- CTA -->
+				<!--	<section id="cta" class="main special">
+						<h2>Etiam veroeros lorem</h2>
+						<p>Phasellus ac augue ac magna auctor tempus proin<br />
+						accumsan lacus a nibh commodo in pellentesque dui<br />
+						in hac habitasse platea dictumst.</p>
+						<ul class="actions">
+							<li><a href="#" class="button big">Get Started</a></li>
+						</ul>
+					</section>
+				-->
+
+				<!-- Banner -->
+				<section id="intro" class="main">
+					<h2><image src="images\MySQL_logo.png" alt="MySQL Icon" width="45" hwight="20" id="vito"></image>MySQL</h2>
+				</section>
+				    <h2><p>▋資料檢視</p></h2>
+					<h3><p>下載來自農委會、農糧署、氣象局等政府單位提供之Open Data，資料類型有種植資料、收穫資料、災害損失資料、氣候資料、各地每日市場價格資料、每月進出口資料等下載共約 89,708筆資料。</p></h3>
+					<section id="main" class="main">
+						<img src="images/s1.jpg" width="900" height="450"> </img><br><br>
+						<h3><p>檢視 98 年-108 年每年台灣各縣市香蕉收穫產量資料。</p></h3>
+						<img src="images/s2.jpg" width="900" height="400"> </img><br><br>
+						<h3><p>檢視 98 年-108 年每年台灣各災害影響各縣市香蕉產量數據。</p></h3>
+						<img src="images/s3.jpg" width="900" height="400"> </img><br><br>
+						<h3><p>檢視 100 年-110 年,台灣各測站每日氣候數據。</p></h3>
+					</section>
+
+					<!---->
+					<h2><p>▋資料清洗</p></h2>
+					<h3><p>檢視資料時發現，欄位需要重新進行編號跟調整，包含台灣縣市中六都改制前後的資料、將缺失值處理、重複值調整、非必要欄位的刪除等。</p></h3>
+					<section id="main" class="main">
+						<img src="images/mysql_02.png"> </img><br><br>
+						<h3><p>location 編號須另外編碼,利用 set、where 等指令,將代號統一以利後續與其他資料進行合併。</p></h3>
+						<img src="images/mysql_03.png"> </img><br><br>
+						<h3><p>將原始資料刪除整列完全相同的重複資料,取得不重複資料。</p></h3>
+						<img src="images/mysql_04.png"> </img><br><br>
+						<h3><p>利用 case when 將日期修改至需要的格式(以新增一欄位的方式)。</p></h3>
+						<img src="images/mysql_05.png"> </img><br><br>
+						<h3><p>將資料 pivot 成不同欄位,減少資料大小(重複的 country, year, id 等)</p></h3>
+						<img src="images/mysql_06.png"> </img><br><br>
+						<h3><p>刪除不用的欄與列,挑選出需要的氣象資料欄位(ex. 欄:無人觀測站/有人觀測站,列:外島氣象資料)</p></h3>
+					</section>
+					
+                    <!--==-->
+					<h2><p>▋資料合併</p></h2>
+					<h3><p>完成原始檔案檢視、資料清洗後，因為後續機器學習需要的特徵欄位都儲存在不同的表裡，為便於操作，我們按照某些欄位對這些表的資料進行合併組合成一張新的資料表。</p></h3>
+					<section id="main" class="main">
+						<img src="images/mysql_01.png"> </img><br><br>
+						<h3><p>利用 sum、avg、max、min 等指令,將原始檔案中根據各欄位的內容屬性,將月為單位的資料,合併為整年度資料。</p></h3>
+						<img src="images/s7.jpg" width="900" height="250"> </img><br><br>
+						<h3><p>將香蕉生產資料與另一份各縣市市場價格資料合併為完整資料</p></h3>
+
+				<!-- Footer -->
+					<!-- <footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Design: nin. </p> -->
+					<!-- </footer> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
